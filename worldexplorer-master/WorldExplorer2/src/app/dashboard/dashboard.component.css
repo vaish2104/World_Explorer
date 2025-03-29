@@ -1,0 +1,45 @@
+
+/* .top{
+    position: absolute;
+    right: 120px;
+    font-size: larger;
+  }
+  .side{
+    margin: 20px 10px;
+  } */
+  
+  .img{
+    border-radius: 50%;
+    margin-top: 13px;
+  }
+  
+  
+  header{
+    background-color: rgb(26, 145, 224);
+  text-align: center;
+  }
+  /* span{
+  text-justify: auto;
+  font-family: 'Oswald', sans-serif;
+  font-size: 200%;
+  } */
+  .active-link{
+  background-size: 1%;
+  color:purple !important;
+  
+  }
+  /* #logout{
+    background-color: red;
+    
+  } */
+  section{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: auto;
+    
+  }
+  .pos{
+    position: relative;
+  }
+  

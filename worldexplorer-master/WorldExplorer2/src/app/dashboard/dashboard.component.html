@@ -1,0 +1,61 @@
+
+
+
+
+
+ <div class="overflow-auto pos">
+
+  <header>
+    
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+      <img src="../../assets/logo.jpg" width="80" height="80" class="d-inline-block align-top" alt="" loading="lazy"  style=" border-radius: 25px;"/>
+      <h1 style="margin-left:15% ;color: white;" >Welcome to World Explorer</h1>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item c-dark">
+            <a class="nav-link" [routerLink]="['search']" data-toggle="collapse" data-target="#navbarSupportedContent" routerLinkActive="active-link" ><h2>Search</h2>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['favourites']" data-toggle="collapse" data-target="#navbarSupportedContent" routerLinkActive="active-link"><h2>WishList</h2></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['recommended']" data-toggle="collapse" data-target="#navbarSupportedContent"  routerLinkActive="active-link">
+            <h2>Recommended</h2>
+            </a>
+          </li>
+          
+         
+          <li>
+            <a class="nav-link" aria-disabled="false" routerLinkActive="active-link" data-toggle="collapse" data-target="#navbarSupportedContent" (click)="logout()" id="logout"> <h2>Log Out</h2></a>
+
+          </li>
+          <li>
+
+              <a class="nav-link" [routerLink]="['edit']"  data-toggle="collapse" data-target="#navbarSupportedContent"  aria-disabled="false"><h2>Edit Profile </h2></a>
+            </li>
+        </ul>
+
+      </div>
+    </nav>
+
+   
+  </header>
+  <section >
+
+  <div style="height:100vh;" class="container-fluid">
+
+    <router-outlet></router-outlet>
+    <router-outlet name='statOpener'></router-outlet>
+
+  </div>
+</section>
+</div> 
+<!-- Footer-Section -->
+<app-footer></app-footer> 

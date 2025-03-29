@@ -1,0 +1,16 @@
+
+.active-link
+{
+    color: rgb(224, 26, 194) !important;
+}
+i{
+    margin-left:2px;
+    font-size: 2em !important;
+}
+.navbar li{
+margin-right: 0px;
+}
+/* header{
+    position: fixed;
+    width: 100%;
+} */

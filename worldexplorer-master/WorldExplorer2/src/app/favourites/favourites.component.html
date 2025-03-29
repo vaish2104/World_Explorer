@@ -1,0 +1,42 @@
+<!-- display all the favourite players and have a button in each card to delete them -->
+
+<div class="cardContainer"  >
+
+    <mat-card class="card" *ngFor="let data of list">
+      <h1>{{data.common_name}}</h1>
+      <img mat-card-image height="100px" [src]="data.flag">
+
+      <mat-card-subtitle>
+        Official Name :{{data.officialname}}
+      </mat-card-subtitle>
+
+      <mat-card-content>
+        Capital : {{data.capital}}
+      </mat-card-content>
+
+      <mat-card-content>
+        Region: {{data.region}}
+      </mat-card-content>
+      <mat-card-content>
+        Population : {{data.population}}
+      </mat-card-content>
+      <mat-card-content>
+        Area : {{data.area}} sq km
+      </mat-card-content>
+      
+      
+      <h2>Coat of Arms</h2>
+      <img class="carms" [src]="data.coatOfArms">
+ 
+       <mat-card-actions>
+        <button *ngIf="data.status" mat-icon-button class="button-pos">
+           <mat-icon>favorite</mat-icon>
+        </button>
+
+        <button *ngIf="!data.status" mat-icon-button color="warn" class="button-pos" (click)="removeFromFav(data)">
+           <mat-icon>favorite</mat-icon>
+        </button>
+     </mat-card-actions>
+    </mat-card>
+ </div>
+ 

@@ -1,0 +1,102 @@
+<!-- Sign Up form -->
+
+<app-header></app-header>
+
+
+
+<section class="vh-60 gradient-custom">
+   <div class="container py-5 h-100">
+     <div class="row d-flex justify-content-center align-items-center h-100">
+       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+         <div class="card bg-dark text-white" style="border-radius: 1rem;">
+           <div class="card-body p-5 text-center">
+ 
+             <div class="mb-md-5 mt-md-4 pb-5">
+ 
+               <h2 class="fw-bold mb-2 text-uppercase">Register</h2>
+               <p class="text-white-50 mb-5">Please register here</p>
+               <form [formGroup]="loginForm" (ngSubmit)="signIn()">
+    
+             
+                  <div class="form-group">
+                      <label for="username">User Name</label>
+                      <input type="text" formControlName="email" class="form-control"  />
+                      <small class="err" *ngIf="email.invalid && (email.dirty || email.touched)">
+                          Email is mandatory field
+                       </small>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" formControlName="password" class="form-control" #pass />
+                      <small *ngIf="password.invalid && (password.dirty || password.touched)">
+                          <small class="err" *ngIf="password.errors.required">
+                             Password cannot be left blank
+                          </small>
+                          <small class="err" *ngIf="password.errors.minlength">
+                             Password must have minimum 8characters
+                          </small>
+                       </small>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Confirm Password</label>
+                      <input type="password" formControlName="cpassword" class="form-control"  />
+                      
+                      <small *ngIf="cpassword.invalid && (cpassword.dirty || cpassword.touched)">
+                          <small class="err" *ngIf="cpassword.errors.required">
+                             Password cannot be left blank
+                          </small>
+                          <small class="err" *ngIf="cpassword.errors.minlength">
+                             Password must have minimum 8characters
+                          </small>
+                          <small *ngIf="matcher()">& Both password's should match</small>
+                       </small>
+                  </div>
+                  <div class="form-group">
+                      <label for="firstName">Name</label>
+                      <input type="text" formControlName="name" class="form-control"/>
+                      <small class="err" *ngIf="name.invalid && (name.dirty || name.touched)">
+                          Name is mandatory field
+                       </small>
+                  </div>
+                  <div class="form-group">
+                      <label for="firstName">Mobile Number</label>
+                      <input type="number" formControlName="mobile" class="form-control"/>
+                      <small class="err" *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)">
+                          Enter a valid 10 digit Mobile Number
+                       </small>
+                  </div>
+                  
+                    <br>
+                    
+                    
+                  <div class="form-group">
+               
+                          <button id="re" (click)="tologin()" value="log In" class="btn btn-primary float-right">
+                                  Already Registerd ?
+                              </button>
+                      <button style="margin-right: 3px;" [disabled]="!loginForm.valid" class="btn btn-primary float-right">
+                          Register
+                      </button> 
+                      
+                         
+                      
+                  </div>
+                 
+               
+                  
+               </form>
+ 
+               
+ 
+             </div>
+ 
+             
+ 
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+<app-footer></app-footer>
+

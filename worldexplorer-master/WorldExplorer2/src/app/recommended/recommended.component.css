@@ -1,0 +1,137 @@
+ 
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+
+ .body{
+  background-color: blueviolet;
+ }
+ .containerall{
+  
+  
+   
+   margin-top: 0px;
+   
+   
+   
+ }
+ 
+
+ .height{
+  height: 20vh;
+ }
+ 
+
+ .search{
+ position: relative;
+ box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+   
+ }
+
+ .search input{
+
+  height: 60px;
+  text-indent: 25px;
+  border: 2px solid #d6d4d4;
+
+
+ }
+
+
+ .search input:focus{
+
+  box-shadow: none;
+  border: 2px solid blue;
+
+
+ }
+
+ .search .fa-search{
+
+  position: absolute;
+  top: 20px;
+  left: 16px;
+
+ }
+
+ .search button{
+
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 50px;
+  width: 110px;
+  background: blue;
+
+ }
+ 
+ 
+ 
+ 
+.cardContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0;
+  
+  text-align: justify;
+  justify-content: center;
+  
+}
+.cardContainer2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0;
+  
+  text-align: justify;
+  justify-content: center;
+}
+
+.card{
+  width: 200px;
+  margin: 15px;
+  background-color: bisque;
+
+}
+.card2{
+  width: 300px;
+  margin: 15px;
+  background-color: bisque;
+}
+.pagination{
+  position: absolute;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  right: 20px;
+   background-color: rgb(90, 70, 76);
+}
+.button-pos{
+  
+   margin: 2vh auto;
+  
+}
+
+input{
+  border: 2px;
+  border-color: black;
+
+}
+.btn{
+  margin-bottom: 20px;
+}
+mat-card-actions button{
+  margin-left: 40%;
+  margin-right: 40%;
+}
+.input-group{
+  margin-top: 3%;
+}
+.carms
+{
+  padding-right: 15px;
+  height: 60px;
+  width: 60px;
+}
+
+
+  

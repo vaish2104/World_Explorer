@@ -1,0 +1,142 @@
+<!-- Login form -->
+<app-header></app-header>
+<!-- <div class="img">
+        <div class="form">
+<form [formGroup]="loginForm" (ngSubmit)="logIn()">
+    <div>
+            <div class="login"> Login</div>   
+            <br/>
+        <label for="email">Email</label>
+        <input type="text" placeholder="Enter Email" formControlName="email">
+        <small class="esmall" *ngIf="email.invalid && (email.dirty || email.touched)">
+            email is mandatory field
+        </small>
+        
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Password" formControlName="password">
+        <small *ngIf="password.invalid && (password.dirty || password.touched)">
+            <small *ngIf="password.errors.required">
+                password cannot be left blank
+            </small>
+            <small *ngIf="password.errors.minlength">
+                password must have minimum 8characters
+            </small>
+        </small>
+    </div>
+
+    <div class="but">
+        <button [disabled]="!loginForm.valid" value="sign In">Log In</button>
+        
+        <button (click)="tosignup()" value="signIn">New User</button>
+    </div>
+</2form>
+</div>
+</div> -->
+
+
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+      
+                  <div class="mb-md-5 mt-md-4 pb-5">
+      
+                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                    <p class="text-white-50 mb-5">Please enter your login and password!</p>
+      
+                    <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+                        <div class="form-group">
+                            <label for="email">Username</label>
+                            <input type="text" formControlName="email" class="form-control"/>
+                            <small class="esmall" *ngIf="email.invalid && (email.dirty || email.touched)">
+                                email is mandatory field
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" formControlName="password" class="form-control" />
+                            <small *ngIf="password.invalid && (password.dirty || password.touched)">
+                                <small *ngIf="password.errors.required">
+                                    password cannot be left blank
+                                </small>
+                                <small *ngIf="password.errors.minlength">
+                                    password must have minimum 8characters
+                                </small>
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            
+                                <button  id="re" (click)="tosignup()" class="btn btn-primary float-right">
+                                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1 "></span>
+                                        Register
+                                    </button> 
+                                    
+                            <button style="margin-right: 3px;" [disabled]="!loginForm.valid" class="btn btn-primary float-right">
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                Login
+                            </button>
+                            
+                            
+                            
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+    
+   
+
+
+
+
+<app-footer></app-footer>
+
+<!--
+    <div style="margin-bottom:160px ;" class="col-md-6 offset-md-3 mt-5">
+     <div class="card mx-auto">
+    <h1 class="card-header text-center">Login</h1>
+    <div class="card-body">
+        <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+            <div class="form-group">
+                <label for="email">Username</label>
+                <input type="text" formControlName="email" class="form-control"/>
+                <small class="esmall" *ngIf="email.invalid && (email.dirty || email.touched)">
+                    email is mandatory field
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" class="form-control" />
+                <small *ngIf="password.invalid && (password.dirty || password.touched)">
+                    <small *ngIf="password.errors.required">
+                        password cannot be left blank
+                    </small>
+                    <small *ngIf="password.errors.minlength">
+                        password must have minimum 8characters
+                    </small>
+                </small>
+            </div>
+            <div class="form-group">
+                    <button id="re" (click)="tosignup()" class="btn btn-primary float-right">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1 "></span>
+                            Register
+                        </button>
+                <button [disabled]="!loginForm.valid" class="btn btn-primary float-right">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Login
+                </button>
+                 <a  class="btn btn-link">Register</a> -->
+                
+            <!-- </div>
+        </form>
+    </div>
+</div>
+ </div> --> 

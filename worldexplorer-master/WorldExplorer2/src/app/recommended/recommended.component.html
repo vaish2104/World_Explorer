@@ -1,0 +1,101 @@
+<!-- Show the cards of recommended players -->
+
+
+<div class="main1">
+   <div class="containerall">
+ 
+     <div class="row height d-flex justify-content-center align-items-center">
+ 
+       <div class="col-md-8">
+ 
+         <div class="search">
+           <i class="fa fa-search"></i>
+           <input type="text" class="form-control" placeholder="Search Any Country for Recommendation" [(ngModel)]="val">
+           <button class="btn btn-primary" (click)="getData(val)">Search</button>
+         </div>
+ 
+       </div>
+ 
+     </div>
+   </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   <div class="cardContainer">
+ 
+     <mat-card class="card" *ngFor="let data of list ">
+ 
+       <h1>{{data.name.common}}</h1>
+         <mat-card-subtitle>
+           Official Name : {{data.name.official}}
+         </mat-card-subtitle>
+ 
+         <mat-card-content>
+           Capital : {{data.capital}}
+         </mat-card-content>
+         <button class="btn btn-primary" (click)="showData(data)">Recommend Countries</button>
+ 
+ 
+         
+     </mat-card>
+   </div>
+ 
+   <!-- <div class="pagination">
+     <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+   </div> -->
+ 
+   <!-- show partical country -->
+   <div class="cardContainer2" *ngIf="show">
+ 
+ 
+     <mat-card class="card2" *ngFor="let data of list1">
+     <h2> {{data.name.common}}</h2>
+       <img mat-card-image height="100px" [src]="data.flags.png">
+ 
+       <mat-card-subtitle>
+         Official Name :{{data.name.official}}
+       </mat-card-subtitle>
+ 
+       <mat-card-content>
+         Capital : {{data.capital}}
+       </mat-card-content>
+ 
+       <mat-card-content>
+         Region: {{data.region}}
+       </mat-card-content>
+       <mat-card-content>
+         Population : {{data.population}}
+       </mat-card-content>
+       <mat-card-content>
+         Area : {{data.area}} sq km
+       </mat-card-content>
+       
+       <mat-card-content>
+         <a [attr.href]="data.maps.googleMaps">View on Map</a>
+       </mat-card-content>
+       <h2>Coat of Arms</h2>
+       <img class="carms" [src]="data.coatOfArms.png">
+       <button class="btn btn-primary" (click)="hideData(data)">hide Detail</button>
+       <mat-card-actions>
+         <button *ngIf="data.status" mat-icon-button class="align-self-end button-pos" (click)="addToFav(data)">
+           <mat-icon>favorite</mat-icon>
+         </button>
+ 
+         <button *ngIf="!data.status" mat-icon-button color="warn" class="align-self-end button-pos"
+           (click)="removeFromFav(data)">
+           <mat-icon>favorite</mat-icon>
+         </button>
+       </mat-card-actions>
+ 
+ 
+     </mat-card>
+ 
+ 
+   </div>
+ </div>
